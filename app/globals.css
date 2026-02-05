@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Hero animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+  
+  .delay-1000 {
+    animation-delay: 1000ms;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  :root {
+    /* Luxury color palette - Deep Emerald Green & Champagne Gold */
+    --background: 0 0% 98%;
+    --foreground: 140 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 15%;
+    --primary: 140 40% 25%; /* Deep Emerald Green */
+    --primary-foreground: 45 100% 96%; /* Champagne */
+    --secondary: 45 75% 60%; /* Champagne Gold */
+    --secondary-foreground: 140 30% 15%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 45 75% 60%; /* Champagne Gold */
+    --accent-foreground: 140 30% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89%;
+    --input: 0 0% 95%;
+    --ring: 140 40% 25%;
+    --chart-1: 140 40% 25%;
+    --chart-2: 45 75% 60%;
+    --chart-3: 200 30% 50%;
+    --chart-4: 140 20% 60%;
+    --chart-5: 45 70% 70%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 140 30% 20%;
+    --sidebar-primary: 140 40% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 75% 60%;
+    --sidebar-accent-foreground: 140 30% 25%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 140 40% 25%;
+  }
+  .dark {
+    --background: 140 30% 10%;
+    --foreground: 45 100% 95%;
+    --card: 140 35% 15%;
+    --card-foreground: 45 100% 95%;
+    --popover: 140 30% 12%;
+    --popover-foreground: 45 100% 95%;
+    --primary: 45 75% 60%;
+    --primary-foreground: 140 30% 15%;
+    --secondary: 140 40% 25%;
+    --secondary-foreground: 45 100% 95%;
+    --muted: 140 20% 30%;
+    --muted-foreground: 45 100% 80%;
+    --accent: 45 75% 60%;
+    --accent-foreground: 140 30% 25%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 140 20% 25%;
+    --input: 140 20% 25%;
+    --ring: 45 75% 60%;
+    --chart-1: 45 75% 60%;
+    --chart-2: 140 40% 25%;
+    --chart-3: 200 30% 50%;
+    --chart-4: 140 20% 50%;
+    --chart-5: 45 70% 50%;
+    --sidebar-background: 140 30% 12%;
+    --sidebar-foreground: 45 100% 95%;
+    --sidebar-primary: 45 75% 60%;
+    --sidebar-primary-foreground: 140 30% 15%;
+    --sidebar-accent: 140 40% 35%;
+    --sidebar-accent-foreground: 45 100% 95%;
+    --sidebar-border: 140 20% 25%;
+    --sidebar-ring: 45 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  
+  /* Smooth scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 6px;
+    border: 2px solid hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+}
