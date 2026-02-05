@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Sparkles, BedDouble as Needle, Heart } from 'lucide-react'
+import { Heart, BedDouble as Needle, Crown } from 'lucide-react'
 
 const services = [
   {
     id: 1,
     title: 'Bridal Blouses',
     description: 'Exquisitely designed and perfectly fitted bridal blouses for your special day',
-    icon: Sparkles,
+    icon: Crown,
     color: 'from-primary/20 to-primary/5',
   },
   {
@@ -44,7 +44,7 @@ export function Services() {
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-6 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-accent" />
+            <Heart className="w-4 h-4 text-accent" />
             <p className="text-primary font-inter text-sm tracking-widest uppercase font-semibold">
               What We Offer
             </p>

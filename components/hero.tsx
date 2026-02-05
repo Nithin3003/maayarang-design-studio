@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Sparkles, Star } from 'lucide-react'
+import { ArrowRight, Heart, Star } from 'lucide-react'
 import { ConsultationForm } from './consultation-form'
 
 export function Hero() {
@@ -18,15 +18,15 @@ export function Hero() {
           <div className="absolute top-40 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse delay-700"></div>
           <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-accent/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
           
-          {/* Decorative sparkle elements */}
+          {/* Decorative elements */}
           <div className="absolute top-32 right-1/4 text-accent/30 animate-pulse">
-            <Sparkles className="w-8 h-8" />
+            <Heart className="w-8 h-8" />
           </div>
           <div className="absolute top-1/3 left-1/4 text-primary/20 animate-pulse delay-500">
             <Star className="w-6 h-6" />
           </div>
           <div className="absolute bottom-1/4 right-1/3 text-accent/25 animate-pulse delay-1000">
-            <Sparkles className="w-10 h-10" />
+            <Heart className="w-10 h-10" />
           </div>
         </div>
 
@@ -43,11 +43,11 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Sparkles className="w-4 h-4 text-accent" />
+            <Heart className="w-4 h-4 text-accent" />
             <p className="text-primary font-inter text-sm tracking-widest uppercase font-semibold">
               Premium Couture Experience
             </p>
-            <Sparkles className="w-4 h-4 text-accent" />
+            <Heart className="w-4 h-4 text-accent" />
           </motion.div>
 
           {/* Main Heading with gradient */}

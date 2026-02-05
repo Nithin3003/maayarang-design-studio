@@ -11,7 +11,7 @@ export function MobileCallButton() {
       <a href={`tel:${phoneNumber}`}>
         <Button 
           size="lg"
-          className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground font-inter flex items-center justify-center gap-3 py-7 text-base font-bold rounded-2xl shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300 animate-pulse"
+          className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground font-inter flex items-center justify-center gap-3 py-7 text-base font-bold rounded-2xl shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300"
         >
           <Phone className="w-6 h-6" />
           Call Now - 080 3167 8770

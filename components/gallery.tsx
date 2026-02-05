@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Sparkles } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 export function Gallery() {
   const galleryImages = [
@@ -44,7 +44,7 @@ export function Gallery() {
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-6 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-accent" />
+            <Heart className="w-4 h-4 text-accent" />
             <p className="text-primary font-inter text-sm tracking-widest uppercase font-semibold">
               Our Collections
             </p>

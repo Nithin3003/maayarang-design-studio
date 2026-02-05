@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Menu, X, Sparkles } from 'lucide-react'
+import { Menu, X, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ConsultationForm } from './consultation-form'
 import { Logo } from './logo'
@@ -20,7 +20,7 @@ export function Header() {
             <div className="relative transition-transform group-hover:scale-110">
               <Logo size="default" />
               <div className="absolute -top-1 -right-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                <Sparkles className="w-4 h-4" />
+                <Heart className="w-4 h-4" />
               </div>
             </div>
             <div>
@@ -57,7 +57,7 @@ export function Header() {
               onClick={() => setShowConsultation(true)}
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2" />
               Book a Consultation
             </Button>
           </div>
@@ -99,7 +99,7 @@ export function Header() {
                 }}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-inter shadow-lg"
               >
-                <Sparkles className="w-4 h-4 mr-2" />
+                <Heart className="w-4 h-4 mr-2" />
                 Book a Consultation
               </Button>
             </div>

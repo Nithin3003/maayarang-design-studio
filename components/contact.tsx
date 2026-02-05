@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Phone, MapPin, Mail, Clock, Sparkles } from 'lucide-react'
+import { Phone, MapPin, Mail, Clock, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function Contact() {
