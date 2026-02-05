@@ -27,16 +27,16 @@ export function ConsultationForm({ onClose }: ConsultationFormProps) {
     setLoading(true)
 
     try {
-      // Create WhatsApp message
+      // Create WhatsApp message to business number
       const message = `Hello! I would like to book a consultation.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEvent Date: ${formData.eventDate}`
-      const whatsappLink = `https://wa.me/916364362136?text=${encodeURIComponent(message)}`
+      const whatsappLink = `https://wa.me/918031678770?text=${encodeURIComponent(message)}`
       
       // Open WhatsApp
       window.open(whatsappLink, '_blank')
       
-      // Show success message
-      setSubmitted(true)
+      // Close form immediately
       setFormData({ name: '', phone: '', eventDate: '' })
+      if (onClose) onClose()
     } catch (error) {
       console.error('Error:', error)
     } finally {
@@ -145,14 +145,14 @@ export function ConsultationForm({ onClose }: ConsultationFormProps) {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-foreground/80 font-inter mb-6 leading-relaxed text-base sm:text-lg"
             >
-              Thank you for reaching out to <span className="font-semibold text-accent">Maayarang</span>! Your request for a magical makeover has been received. <span className="font-semibold">Medha</span> or a member of our design team will contact you shortly to discuss your dream outfit.
+              Thank you for reaching out to <span className="font-semibold text-accent">Maayarang</span>! Your request has been sent via WhatsApp. <span className="font-semibold">Medha</span> or a member of our design team will contact you shortly to discuss your dream outfit.
             </motion.p>
             
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-4 mb-6 border border-accent/30"
+              className="bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 rounded-xl p-6 mb-6 border border-accent/30"
             >
               <p className="text-sm font-inter text-foreground/90">
                 We look forward to creating something magical for you! ✨
@@ -166,8 +166,10 @@ export function ConsultationForm({ onClose }: ConsultationFormProps) {
             >
               <Button
                 onClick={() => {
-                  setSubmitted(false)
-                  onClose?.()
+                  if (onClose) {
+                    setSubmitted(false)
+                    onClose()
+                  }
                 }}
                 className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-inter py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
@@ -187,7 +189,7 @@ export function ConsultationForm({ onClose }: ConsultationFormProps) {
           Book a Consultation
         </h2>
         <p className="text-muted-foreground font-inter mb-8">
-          Fill in your details and we'll get back to you via WhatsApp
+          Fill in your details and we'll contact you via WhatsApp
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">

@@ -92,7 +92,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              onClick={() => setShowConsultation(true)}
+              onClick={() => window.open('https://wa.me/916364362136?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation.%0A%0AName:%20', '_blank')}
               className="group bg-primary hover:bg-primary/90 text-primary-foreground font-inter px-10 py-6 text-base shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               Book a Consultation

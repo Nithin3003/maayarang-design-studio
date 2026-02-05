@@ -54,7 +54,7 @@ export function Header() {
           {/* Enhanced CTA Button */}
           <div className="hidden md:block">
             <Button 
-              onClick={() => setShowConsultation(true)}
+              onClick={() => window.open('https://wa.me/916364362136?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation.%0A%0AName:%20', '_blank')}
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               <Heart className="w-4 h-4 mr-2" />
@@ -94,7 +94,7 @@ export function Header() {
               </a>
               <Button 
                 onClick={() => {
-                  setShowConsultation(true)
+                  window.open('https://wa.me/916364362136?text=Hello!%20I%20would%20like%20to%20book%20a%20consultation.%0A%0AName:%20', '_blank')
                   setIsOpen(false)
                 }}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-inter shadow-lg"
